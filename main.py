@@ -19,7 +19,7 @@ logger = setup_logging()
 bot = commands.Bot(command_prefix=config['prefix'], self_bot=True, case_insensitive=True)
 bot.remove_command('help')  # Removing default help command
 
-# Placeholder for aiohttp session, use a type comment to avoid Pylance errors
+# Placeholder for aiohttp session, using a type comment to avoid Pylance errors
 bot.session = None  # type: Optional[aiohttp.ClientSession]
 
 async def load_cogs() -> None:
