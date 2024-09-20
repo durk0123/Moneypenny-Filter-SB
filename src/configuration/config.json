@@ -1,0 +1,5 @@
+{
+    "token": "YOUR-DISCORD-TOKEN-HERE",
+    "webhook_url": "YOUR-DISCORD-WEBHOOK-URL-HERE",
+    "prefix": "."
+}
