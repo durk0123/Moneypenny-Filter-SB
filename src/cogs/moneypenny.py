@@ -30,7 +30,7 @@ class MoneyPenny(commands.Cog):
         if message.author.id == self.bot.user.id or message.content.startswith('.'):
             return
 
-        # Log to check if any message is detected
+        # Log to check if any message is detected (debugging)
         logger.info(f"Received message from: {message.author} (webhook_id: {message.webhook_id})")
 
         # Detect webhook messages by checking webhook_id or if author is a bot without a discriminator (webhook)
@@ -46,7 +46,7 @@ class MoneyPenny(commands.Cog):
                     normalized_filters = [filter_word.upper() for filter_word in filters]
 
                     for filter_word in normalized_filters:
-                        logger.debug(f"Checking filter '{filter_word}' in title and description")
+                        logger.debug(f"Checking filter '{filter_word}' in embed title(s)")
 
                         # Case-insensitive search for the filter word in the title
                         if embed.title and filter_word.lower() in embed.title.lower():
